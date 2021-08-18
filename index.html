@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- bootswatch.com  link to their theme that i chose  when i have this one i have to comment out the bootstrap css
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    -->
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts this gives me access to use the font chosen -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Roboto+Slab&display=swap');
+    </style>
+    <!--link to css page-->
+    <link rel="stylesheet" href="css/client.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- navbar -->
+    <!--navbar-dark bg-dark is a bootstrap styling setting
+    navbar-expand-md means at medium size the navbar collapses-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!--brand means it stands out on the navbar and when it is collapsed it is still there it doesnt hide-->
+        <a class="navbar-brand" href="#">
+            <!--compass logo from font awesome-->
+            <i class="far fa-compass"></i>
+            Northwind</a>
+
+        <!--adds a navbar that collapses-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!--dropdown navbar item products-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-layer-group"></i> Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="productDropdown">
+                        <a class="dropdown-item" href="#"><i class="fas fa-folder"></i> Browse Categories</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-search"></i> Product Search</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fas fa-tag"></i> Current Discounts</a>
+                    </div>
+                </li>
+                <!--dropdown navbar item customers-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="customerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-users"></i> Customers
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="customerDropdown">
+                        <a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i> Account</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i> Register</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+                    </div>
+                </li>
+            </ul>
+                    <!--adds textbox and button to navbar-->
+
+            <!--d-none means display none   and    d-md-block for size classes medium and up display it anything lower dont display-->
+            <form class="form-inline ml-auto d-none d-md-block">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Products" aria-label="Search">
+                <!-- the i class is the image from font awesome
+                the span element is for accessibility  sr-only means that it will screen read the word Search to them through a text reader-->
+                <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="fas fa-search"></i><span class="sr-only">Search</span></button>
+            </form>
+        </div>
+
+    </nav>
+    <!--style= is referencing a font from google fonts that i want just for this div container-->
+    <div class="container" style="font-family: 'Roboto Slab', serif;">
+        <!--jumbotron bootstrap-->
+        <div class="jumbotron">
+            <h1 class="display-4">Northwind</h1>
+            <p class="lead">We have the best prices and selection of high quality foods & beverages on the planet!</p>
+            <hr class="my-4">
+            <p>For spectacular international cuisine, look no further.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Order Now <i class="fas fa-angle-double-right"></i></a>
+          </div>
+    </div>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- bootstrap javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
